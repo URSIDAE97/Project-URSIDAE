@@ -1,7 +1,7 @@
 import { TrayComponent } from './components/TrayComponent'
+import { MainWindowComponent } from './components/MainWindowComponent'
 
 const electron = require('electron')
-const path = require('path')
 
 const app = electron.app
 const protocol = electron.protocol
@@ -11,28 +11,27 @@ let win = null
 let tray = null
 
 // ----------------------------- //
+// -------- Main window -------- //
+// ----------------------------- //
+
+const mainWinInfo = new MainWindowComponent()
+
+// ----------------------------- //
 // -------- Tray module -------- //
 // ----------------------------- //
 
 const Tray = electron.Tray
 const Menu = electron.Menu
-const trayInfo = new TrayComponent(win)
-const trayIcon = path.join(__dirname, trayInfo.iconPath)
+const trayInfo = new TrayComponent()
 const trayMenu = Menu.buildFromTemplate(trayInfo.template)
 
 let quit = false
 
 
 app.on('ready', function() {
-  win = new BrowserWindow({ 
-    width: 800, 
-    height: 600, 
-    webPreferences: {
-      nodeIntegration: true
-    },
-    show: false,
-    resizable: false,    
-  })
+  // --- main window --- //
+  win = new BrowserWindow(mainWinInfo.options)
+  win.removeMenu()
   win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
 
   win.on('close', (event) => {
@@ -42,9 +41,14 @@ app.on('ready', function() {
     }
   })
 
-  tray = new Tray(trayIcon)
+  // --- tray icon --- //
+  tray = new Tray(trayInfo.icon)
   tray.setContextMenu(trayMenu)
   tray.setToolTip('URSIDAE')
+
+  tray.on('click', function() {
+    win.show()
+  })
 
   trayMenu.getMenuItemById(trayInfo.OPEN_UI).click = function() {
     win.show()
@@ -53,10 +57,6 @@ app.on('ready', function() {
     quit = true
     app.quit()
   }
-
-  tray.on('double-click', function() {
-    win.show()
-  })
 
 })
 
