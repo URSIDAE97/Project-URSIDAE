@@ -1,17 +1,19 @@
-const path = require('path')
+const Path = require('path')
 
 export class MainWindowComponent {
 
     constructor() {
         this.options = { 
-            width: 800, 
-            height: 600, 
+            width: 900, 
+            height: 700, 
             webPreferences: {
-              nodeIntegration: true
+              nodeIntegration: true,
+              webSecurity: false
             },
             show: false,
             resizable: false,
-            icon: path.join(__dirname, '../src/assets/logos/transparent_white_no_title.png'),
+            frame: false,
+            icon: Path.join(__dirname, '../src/assets/logos/transparent_white_no_title.png'),
             title: 'URSIDAE'
         }
         

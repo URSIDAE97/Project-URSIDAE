@@ -1,9 +1,9 @@
-const path = require('path')
+const Path = require('path')
 
 export class TrayComponent {
 
     constructor() {
-        this.icon = path.join(__dirname, '../src/assets/logos/transparent_white_no_title.png'),
+        this.icon = Path.join(__dirname, '../src/assets/logos/transparent_white_no_title.png'),
         this.template = [
             {
                 id: 1,

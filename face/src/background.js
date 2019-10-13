@@ -1,11 +1,11 @@
 import { TrayComponent } from './components/TrayComponent'
 import { MainWindowComponent } from './components/MainWindowComponent'
 
-const electron = require('electron')
+const Electron = require('electron')
 
-const app = electron.app
-const protocol = electron.protocol
-const BrowserWindow = electron.BrowserWindow
+const App = Electron.app
+const Protocol = Electron.protocol
+const BrowserWindow = Electron.BrowserWindow
 
 let win = null
 let tray = null
@@ -16,23 +16,22 @@ let tray = null
 
 const mainWinInfo = new MainWindowComponent()
 
+let quit = false
+
 // ----------------------------- //
 // -------- Tray module -------- //
 // ----------------------------- //
 
-const Tray = electron.Tray
-const Menu = electron.Menu
+const Tray = Electron.Tray
+const Menu = Electron.Menu
 const trayInfo = new TrayComponent()
 const trayMenu = Menu.buildFromTemplate(trayInfo.template)
 
-let quit = false
 
-
-app.on('ready', function() {
+App.on('ready', function() {
   // --- main window --- //
   win = new BrowserWindow(mainWinInfo.options)
-  win.removeMenu()
-  win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
+  win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)  
 
   win.on('close', (event) => {
     if(!quit) {
@@ -55,21 +54,21 @@ app.on('ready', function() {
   }
   trayMenu.getMenuItemById(trayInfo.QUIT).click = function() {
     quit = true
-    app.quit()
+    App.quit()
   }
 
 })
 
-protocol.registerSchemesAsPrivileged(
+Protocol.registerSchemesAsPrivileged(
   [{scheme: 'app', privileges: { secure: true, standard: true } }]
 )
 
-app.on('window-all-closed', () => {
+App.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    App.quit()
   }
 })
 
-app.on('activate', () => {
+App.on('activate', () => {
 
 })
