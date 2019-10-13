@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="URSIDAE logo" src="../assets/logos/logo_1.png">
+    <img alt="URSIDAE logo" src="../assets/logos/logo_1.png" height="100px;">
     <TestComponent/>
   </div>
 </template>
