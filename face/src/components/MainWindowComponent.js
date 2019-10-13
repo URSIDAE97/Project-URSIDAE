@@ -4,8 +4,8 @@ export class MainWindowComponent {
 
     constructor() {
         this.options = { 
-            width: 900, 
-            height: 700, 
+            width: 800, 
+            height: 600, 
             webPreferences: {
               nodeIntegration: true,
               webSecurity: false

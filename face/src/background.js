@@ -64,9 +64,7 @@ Protocol.registerSchemesAsPrivileged(
 )
 
 App.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    App.quit()
-  }
+
 })
 
 App.on('activate', () => {
