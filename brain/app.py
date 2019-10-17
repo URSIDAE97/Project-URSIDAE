@@ -8,8 +8,8 @@ app.register_blueprint(test_api)
 
 
 @app.route('/', methods=['GET'])
-def hello_world():
-    return render_template('index.html')
+def info_page():
+    return render_template('unauthorized.html'), 401
 
 
 if __name__ == '__main__':
