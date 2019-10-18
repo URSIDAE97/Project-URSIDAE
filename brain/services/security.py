@@ -13,7 +13,6 @@ auth_api = Blueprint('auth_api', __name__)
 
 
 # -- initialize jwt authentication for application -- #
-# -- and creates '/auth' endpoint for authentication purposes -- #
 def initialize_security(app):
     app.register_blueprint(auth_api)
     app.config['JWT_SECRET_KEY'] = Config.JWT_KEY
@@ -25,6 +24,7 @@ def initialize_security(app):
     return jwt
 
 
+# -- endpoint for authentication purposes -- #
 @auth_api.route('/auth', methods=['POST'])
 def authenticate():
     if not request.is_json:
@@ -45,6 +45,7 @@ def authenticate():
     return jsonify(access_token=access_token), 200
 
 
+# -- redirects to base url -- #
 def unauthorized_redirect(msg):
     print(msg)
     return redirect('/', 301)
