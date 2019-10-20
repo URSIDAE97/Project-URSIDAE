@@ -1,27 +1,28 @@
 # Welcome to Project URSIDAE!
 
-Welcome! I am known as URSIDAE and this is my ultimate creation.
+Welcome! I am known as URSIDAE and this is my great creation.
 
 ## Concept
 
 Technologies:
 
-    FACE:
+    FACE (Frontend):
         - Electron JS
         - Vue JS
-        - (Java Script)
+        - (Java Script, HTML, CSS)
 
-    BRAIN:
+    BRAIN (Backend):
         - Flask
+        - SQLite
         - (Python)
 
 Modules:
 
-    FACE:
-        - as backgroud process with tray icon
-        - user interface
+    FACE (Frontend):
+        - tray
+        - windows
 
-    BRAIN:
-        - memory (storing locally in files)
-        - hippocampus (reading memory)
-        - voice recognition
+    BRAIN (Backend):
+        - memory / hippocampus (database / reading-writing from-to db)
+        - server api security - flsak jwt
+        - voice recognition (not implemented yet)
