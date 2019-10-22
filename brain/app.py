@@ -8,8 +8,7 @@ app = Flask(__name__)
 app.register_blueprint(test_api)
 
 jwt = security.initialize_security(app)
-
-hippocampus.sql_test()
+hippocampus.initialize_memory(app)
 
 
 @app.route('/', methods=['GET'])

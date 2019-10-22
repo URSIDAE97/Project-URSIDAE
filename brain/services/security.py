@@ -2,11 +2,11 @@ from flask import Blueprint, jsonify, request, redirect
 from flask_jwt_extended import JWTManager, create_access_token
 from werkzeug.security import safe_str_cmp
 
-from memory.master import Master
+from memory.model.master import Master
 from config import Config
 
 users = [
-    Master(1, 'URSIDAE', 'admin')
+    Master()
 ]
 
 auth_api = Blueprint('auth_api', __name__)
