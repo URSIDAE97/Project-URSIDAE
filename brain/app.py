@@ -7,8 +7,8 @@ from memory import hippocampus
 app = Flask(__name__)
 app.register_blueprint(test_api)
 
-jwt = security.initialize_security(app)
 hippocampus.initialize_memory(app)
+jwt = security.initialize_security(app)
 
 
 @app.route('/', methods=['GET'])

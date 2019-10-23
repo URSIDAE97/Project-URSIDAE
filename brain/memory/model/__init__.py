@@ -1,2 +1,3 @@
 from .master import *
-from .super_master import *
+from .superior_master import *
+from .settings import *
