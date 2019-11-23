@@ -2,6 +2,8 @@
 
 Welcome! I am known as URSIDAE and this is my great creation.
 
+![LOGO](/assets/git_hub_logo.png)
+
 ## Concept
 
 Technologies:
