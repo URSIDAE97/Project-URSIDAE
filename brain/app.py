@@ -2,10 +2,12 @@ from flask import Flask, render_template
 
 from api import *
 from services import security
+from memory import hippocampus
 
 app = Flask(__name__)
 app.register_blueprint(test_api)
 
+hippocampus.initialize_memory(app)
 jwt = security.initialize_security(app)
 
 

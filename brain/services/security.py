@@ -2,18 +2,16 @@ from flask import Blueprint, jsonify, request, redirect
 from flask_jwt_extended import JWTManager, create_access_token
 from werkzeug.security import safe_str_cmp
 
-from memory.master import Master
+from memory import hippocampus
+from memory.model.master import Master
+# from memory.model.superior_master import SuperiorMaster
 from config import Config
 
-users = [
-    Master(1, 'URSIDAE', 'admin')
-]
 
 auth_api = Blueprint('auth_api', __name__)
 
 
 # -- initialize jwt authentication for application -- #
-# -- and creates '/auth' endpoint for authentication purposes -- #
 def initialize_security(app):
     app.register_blueprint(auth_api)
     app.config['JWT_SECRET_KEY'] = Config.JWT_KEY
@@ -25,6 +23,7 @@ def initialize_security(app):
     return jwt
 
 
+# -- endpoint for authentication purposes -- #
 @auth_api.route('/auth', methods=['POST'])
 def authenticate():
     if not request.is_json:
@@ -45,6 +44,26 @@ def authenticate():
     return jsonify(access_token=access_token), 200
 
 
+# -- register new master -- #
+@auth_api.route('/register', methods=['POST'])
+def register_new_master():
+    if not request.is_json:
+        return jsonify({"msg": "Missing JSON in request"}), 400
+
+    master_name = request.json.get('name', None)
+    password = request.json.get('password', None)
+    if not master_name:
+        return jsonify({"msg": "Missing name parameter"}), 400
+    if not password:
+        return jsonify({"msg": "Missing password parameter"}), 400
+
+    hippocampus.initialize_settings_and_properties()
+    Master.set_trait('name', master_name)
+    Master.set_trait('password', password)
+    return jsonify({"msg": "ta da"}), 200
+
+
+# -- redirects to base url -- #
 def unauthorized_redirect(msg):
     print(msg)
     return redirect('/', 301)
