@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>URSIDAE</title>
+        <link
+            rel="icon"
+            href="{{ url_for('static', filename='transparent_white_no_title.png') }}"
+        />
+<!--        <link-->
+<!--            rel="stylesheet"-->
+<!--            type="text/css"-->
+<!--            href="{{ url_for('static', filename='styles.css') }}"-->
+<!--        />-->
+<!--        TODO: find out why the hell stylesheet is not loaded properly -->
+        <style>
+            body {
+              margin: 0;
+              width: 100%;
+              height: 100%;
+              font-family: 'Comic Sans MS';
+              background: rgb(25, 25, 25);
+              color: rgb(240, 240, 240);
+            }
+
+            .message-container {
+                text-align: center;
+            }
+
+            .logo {
+                margin-top: 5%;
+                margin-bottom:2.5%;
+                height: 50vh;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="message-container">
+            <img
+                class="logo"
+                src="{{ url_for('static', filename='transparent_white.png') }}"
+                alt="URSIDAE_logo"
+            />
+            <h1>Unauthorized</h1>
+            <p>This port is used by URSIDAE for communication between modules.</p>
+        </div>
+    </body>
+</html>
