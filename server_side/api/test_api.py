@@ -9,3 +9,8 @@ test_api = Blueprint('test_api', __name__)
 @jwt_required
 def test():
     return 'test passed'
+
+
+@test_api.route('/test2')
+def test2():
+    return 'test passed'
