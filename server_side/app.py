@@ -13,7 +13,7 @@ jwt = security.initialize_security(app)
 
 @app.route('/', methods=['GET'])
 def info_page():
-    return render_template('unauthorized.html'), 401
+    return render_template('index.html'), 401
 
 
 @app.errorhandler(404)
@@ -22,4 +22,4 @@ def route_not_found(msg):
 
 
 if __name__ == '__main__':
-    app.run(port=5656, debug=True)
+    app.run(port=6969, debug=True)
