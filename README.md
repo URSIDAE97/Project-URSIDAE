@@ -2,6 +2,8 @@
 
 Welcome! I am known as URSIDAE and this is my great creation.
 
+![CI](https://github.com/URSIDAE97/Project-URSIDAE/workflows/CI/badge.svg)
+
 ![LOGO](/assets/git_hub_logo.png)
 
 ## Concept
