@@ -2,8 +2,6 @@ from flask import Blueprint, jsonify, request, redirect
 from flask_jwt_extended import JWTManager, create_access_token
 from werkzeug.security import safe_str_cmp
 
-from memory import hippocampus
-from memory.model.master import Master
 # from memory.model.superior_master import SuperiorMaster
 from config import Config
 
@@ -57,9 +55,6 @@ def register_new_master():
     if not password:
         return jsonify({"msg": "Missing password parameter"}), 400
 
-    hippocampus.initialize_settings_and_properties()
-    Master.set_trait('name', master_name)
-    Master.set_trait('password', password)
     return jsonify({"msg": "ta da"}), 200
 
 
