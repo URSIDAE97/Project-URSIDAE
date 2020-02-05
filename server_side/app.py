@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 from api import *
 from services import security
-from memory import database
+from data import database
 
 app = Flask(__name__)
 app.register_blueprint(test_api)

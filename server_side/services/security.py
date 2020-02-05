@@ -2,7 +2,6 @@ from flask import Blueprint, jsonify, request, redirect
 from flask_jwt_extended import JWTManager, create_access_token
 from werkzeug.security import safe_str_cmp
 
-from memory import hippocampus
 # from memory.model.superior_master import SuperiorMaster
 from config import Config
 
