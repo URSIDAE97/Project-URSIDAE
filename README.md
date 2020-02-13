@@ -1,8 +1,11 @@
 # Welcome to Project URSIDAE!
 
-Welcome! I am known as URSIDAE and this is my great creation.
+Welcome! I am known as URSIDAE and this is my personal IT system. Feel free to use it for your own purposes.
 
-![LOGO](/assets/git_hub_logo.png)
+![Main Workflow](https://github.com/URSIDAE97/Project-URSIDAE/workflows/Main%20Workflow/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=URSIDAE97_Project-URSIDAE&metric=alert_status)](https://sonarcloud.io/dashboard?id=URSIDAE97_Project-URSIDAE)
+
+![LOGO](/assets/logo/logo_github.png)
 
 ## Concept
 

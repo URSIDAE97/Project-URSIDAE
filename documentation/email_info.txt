@@ -1,0 +1,2 @@
+address: ursidae.bot.info@gmail.com
+password: projectursidae
