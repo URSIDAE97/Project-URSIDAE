@@ -1,6 +1,6 @@
 # Welcome to Project URSIDAE!
 
-Welcome! I am known as URSIDAE and this is my great creation.
+Welcome! I am known as URSIDAE and this is my personal IT system.
 
 ![CI](https://github.com/URSIDAE97/Project-URSIDAE/workflows/CI/badge.svg)
 
