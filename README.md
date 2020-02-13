@@ -1,4 +1,4 @@
-# Welcome to Project URSIDAE!
+# Welcome to Project URSIDAE! v 0.0.1
 
 Welcome! I am known as URSIDAE and this is my personal IT system. Feel free to use it for your own purposes.
 
