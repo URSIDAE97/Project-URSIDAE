@@ -13,10 +13,10 @@ export class TrayComponent {
                 id: 2,
                 label: 'Quit'
             }
-        ]        
+        ]
 
         this.OPEN_UI = 1
         this.QUIT = 2
-    }    
+    }
     
 }
