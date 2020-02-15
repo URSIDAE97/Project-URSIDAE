@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo/logo_transparent_white.png">
+    <img alt="Vue logo" src="../assets/img/logo_transparent_white.png">
     <HelloWorld msg="Welcome to URSIDAE!!!"/>
   </div>
 </template>

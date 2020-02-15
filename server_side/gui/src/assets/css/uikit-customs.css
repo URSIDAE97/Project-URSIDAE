@@ -1,0 +1,61 @@
+/* custom versions and additonal classes for uikit styles */
+
+.uk-padding-xsmall {
+  padding: 10px;
+}
+
+.uk-padding-xxsmall {
+  padding: 5px;
+}
+
+.uk-padding-small-bottom {
+  padding-bottom: 15px;
+}
+
+.uk-padding-xsmall-bottom {
+  padding-bottom: 10px;
+}
+
+.uk-padding-xxsmall-bottom {
+  padding-bottom: 5px;
+}
+
+.uk-padding-small-top {
+  padding-top: 15px;
+}
+
+.uk-padding-xsmall-top {
+  padding-top: 10px;
+}
+
+.uk-padding-xxsmall-top {
+  padding-top: 5px;
+}
+
+.uk-padding-small-left {
+  padding-left: 15px;
+}
+
+.uk-padding-xsmall-left {
+  padding-left: 10px;
+}
+
+.uk-padding-xxsmall-left {
+  padding-left: 5px;
+}
+
+.uk-padding-small-right {
+  padding-right: 15px;
+}
+
+.uk-padding-xsmall-right {
+  padding-right: 10px;
+}
+
+.uk-padding-xxsmall-right {
+  padding-right: 5px;
+}
+
+.uk-margin-xsmall-left {
+  margin-left: 5px;
+}

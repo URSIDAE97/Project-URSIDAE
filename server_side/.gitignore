@@ -2,7 +2,12 @@
 
 .idea/
 
-# Python #
+# python #
 
 venv
 __pycache__/
+
+# build files #
+
+templates/
+static/
