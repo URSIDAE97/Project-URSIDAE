@@ -5,7 +5,7 @@
     <div id="content">
       <router-view/>
     </div>
-    <footer/>
+    <footer-bar/>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import UIkit from 'uikit'
 import Icons from 'uikit/dist/js/uikit-icons'
 
 import NavigationBar from '@/components/NavigationBar.vue'
-import Footer from '@/components/Footer.vue'
+import FooterBar from '@/components/FooterBar.vue'
 
 // use uikit icons
 UIkit.use(Icons)
@@ -24,7 +24,7 @@ export default {
 
   components: {
     NavigationBar,
-    Footer
+    FooterBar
   }
 }
 </script>

@@ -3,7 +3,7 @@ module.exports = {
   devServer: {
     host: 'localhost'
   },
-  assetsDir: '../static',
-  publicPath: '',
-  outputDir: '../templates'
+  // assetsDir: '../static',
+  // publicPath: '',
+  // outputDir: '../templates'
 }

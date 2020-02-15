@@ -53,11 +53,6 @@ export default {
   -moz-box-shadow: 0px 2px 10px 0px black;
   box-shadow: 0px 2px 10px 0px black;
 }
-#nav-divider {
-  width: 100%;
-  height: 0px;
-  border-bottom: 1px solid rgb(25, 25, 25);
-}
 .links-list {
   width: fit-content;
   margin: 0 auto;

@@ -59,3 +59,13 @@
 .uk-margin-xsmall-left {
   margin-left: 5px;
 }
+
+.uk-text-xsmall {
+  font-size: 0.675rem;
+  line-height: 1.0;
+}
+
+.uk-text-xxsmall {
+  font-size: 0.550rem;
+  line-height: 1.0;
+}
