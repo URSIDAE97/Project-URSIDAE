@@ -1,8 +1,8 @@
 module.exports = {
   lintOnSave: false,
-  devServer: {
-    host: 'https://ursidae-server.herokuapp.com/'
-  },
+  // devServer: {
+  //   host: 'localhost'
+  // },
   assetsDir: '../static',
   publicPath: '',
   outputDir: '../templates'
