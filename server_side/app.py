@@ -1,25 +1,11 @@
-from flask import Flask, render_template
-
+from flask import Flask
 from api import *
-# from services import security
-from data import database
+from flask_cors import CORS
 
 app = Flask(__name__)
-app.register_blueprint(test_api)
 
-database.initialize_memory(app)
-# jwt = security.initialize_security(app)
-
-
-@app.route('/', methods=['GET'])
-def info_page():
-    return render_template('index.html'), 200
-
-
-# @app.errorhandler(404)
-# def route_not_found(msg):
-#     return security.unauthorized_redirect(msg)
-
+CORS(app)
+app.register_blueprint(authentication_api, url_prefix='/api/auth')
 
 if __name__ == '__main__':
     app.run(port=6969, debug=True)

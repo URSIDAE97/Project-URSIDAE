@@ -1,7 +1,7 @@
 <template>
   <div id="nav-bar" class="uk-margin-bottom">
     <div id="nav-logo" class="uk-padding-xxsmall uk-padding-xsmall-bottom">
-      <router-link to="/">
+      <router-link :to="{ name: 'dashboard' }">
         <img
           src="../assets/img/logo_horizontal_title_transparent_white.png"
           alt="logo_project_ursidae"
@@ -12,16 +12,27 @@
     <div id="nav-links" class="uk-padding-xxsmall" uk-sticky="offset: 1px">
       <ul class="uk-subnav uk-subnav-divider links-list">
         <li>
-          <router-link to="/">DASHBOARD</router-link>
-          <span uk-icon="icon: thumbnails; ratio: 0.9" class="uk-margin-xsmall-left"></span>
+          <router-link
+            :to="{ name: 'dashboard' }"
+            tag="button"
+            class="uk-button uk-button-text"
+          >DASHBOARD</router-link>
+          <span uk-icon="icon: thumbnails; ratio: 0.9;" class="uk-margin-xsmall-left"></span>
         </li>
         <li>
-          <router-link to="/about">ABOUT</router-link>
-          <span uk-icon="icon: question; ratio: 0.9" class="uk-margin-xsmall-left"></span>
+          <router-link
+            :to="{ name: 'settings' }"
+            tag="button"
+            class="uk-button uk-button-text"
+          >SETTINGS</router-link>
+          <span uk-icon="icon: settings; ratio: 0.9;" class="uk-margin-xsmall-left"></span>
         </li>
         <li>
-          <router-link to="/about">SETTINGS</router-link>
-          <span uk-icon="icon: settings; ratio: 0.9" class="uk-margin-xsmall-left"></span>
+          <button
+            class="uk-button uk-button-text"
+            @click="logout()"
+          >LOG OUT</button>
+          <span uk-icon="icon: sign-out; ratio: 0.9;" class="uk-margin-xsmall-left"></span>
         </li>
       </ul>
     </div>
@@ -29,8 +40,22 @@
 </template>
 
 <script>
+import { clearAuthToken } from '@/services/local_storage_service'
+import { mapActions } from 'vuex'
+
 export default {
-  name: 'navigation-bar'
+  name: 'navigation-bar',
+
+  methods: {
+    ...mapActions([
+      'setUserInfo'
+    ]),
+    logout () {
+      clearAuthToken()
+      this.setUserInfo(null)
+      this.$router.push({ name: 'login' })
+    }
+  }
 }
 </script>
 
@@ -39,6 +64,7 @@ export default {
   background-color: black;
   color: rgb(240, 240, 240);
   display: grid;
+  width: 100vw;
 }
 #nav-logo {
   margin: 0 auto;

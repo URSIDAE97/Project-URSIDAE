@@ -1,1 +1,7 @@
 /* custom css classes for project URSIDAE grafical interfaces */
+
+/* autocomplete styles */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgb(25, 25, 25) inset;
+  box-shadow: 0 0 0 1000px rgb(25, 25, 25) inset;
+}

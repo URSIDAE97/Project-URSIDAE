@@ -1,5 +1,7 @@
 /* custom versions and additonal classes for uikit styles */
 
+/* padding */
+
 .uk-padding-xsmall {
   padding: 10px;
 }
@@ -56,16 +58,38 @@
   padding-right: 5px;
 }
 
+/* margin */
+
 .uk-margin-xsmall-left {
   margin-left: 5px;
 }
 
+.uk-margin-xmedium-top {
+  margin-top: 30px;
+}
+
+.uk-margin-xxmedium-top {
+  margin-top: 20px;
+}
+
+.uk-margin-xxmedium-right {
+  margin-right: 20px;
+}
+
+/* text size */
+
 .uk-text-xsmall {
-  font-size: 0.675rem;
+  font-size: 0.775rem;
   line-height: 1.0;
 }
 
 .uk-text-xxsmall {
-  font-size: 0.550rem;
+  font-size: 0.675rem;
   line-height: 1.0;
+}
+
+/* button */
+
+.uk-button-text::before {
+  border-bottom: 1px solid rgb(240, 240, 240);
 }
