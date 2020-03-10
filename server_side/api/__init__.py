@@ -1,1 +1,1 @@
-from .authentication_api import *
+from .authentication_api import authentication_api

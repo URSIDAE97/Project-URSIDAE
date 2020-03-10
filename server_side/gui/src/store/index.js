@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user: null,
-    global_loading: true
+    global_loading: false
   },
   mutations: {
     SET_USER_INFO (state, user) {

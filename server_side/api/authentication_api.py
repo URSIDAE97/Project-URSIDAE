@@ -1,12 +1,12 @@
 from flask import Blueprint, request
-from services import SecurityService
+from service import SecurityService
 
 
 authentication_api = Blueprint('authentication_api', __name__)
 
 
 @authentication_api.route('/login', methods=['POST'])
-def test():
+def authenticate_user():
     """
     Authenticate user
     """
