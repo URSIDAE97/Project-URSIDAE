@@ -9,8 +9,16 @@ class UserService:
 
     @staticmethod
     def find_by_username(username):
+        """
+        find user in database by username
+        :param username: username
+        :return: User object or None
+        """
         user = db.session.query(UserEntity) \
             .filter(UserEntity.username == username) \
             .first()
 
-        return user.data()
+        if user:
+            return user.data()
+        else:
+            return None

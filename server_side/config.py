@@ -14,3 +14,9 @@ class Configuration:
     ALEMBIC = {
         'script_location': os.path.join('model', 'migrations')
     }
+
+    """
+    security
+    """
+    JWT_SECRET_KEY = 'BOnQJ7o6SpPsvwlGQ3GuqSB4WK8IblJC'
+    JWT_ACCESS_TOKEN_EXPIRES = 900

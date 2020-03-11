@@ -1,2 +1,2 @@
-from .security_service import SecurityService
+from .security_service import SecurityService, jwt, bcrypt
 from .user_service import UserService

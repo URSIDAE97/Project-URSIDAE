@@ -6,12 +6,12 @@
         <img alt="URSIDAE logo" src="../assets/img/logo_title_transparent_white.png">
         <div class="uk-margin-medium-left uk-margin-medium-top">
           <text-input
-            label="Login"
+            label="Username"
             icon="user"
             :error="loginError"
-            :value="user.login"
+            :value="user.username"
             :maxlength="20"
-            @input="user.login = $event; loginError = false"
+            @input="user.username = $event; loginError = false"
             @enter="login()"
           />
           <text-input
@@ -59,7 +59,7 @@ export default {
   data () {
     return {
       user: {
-        login: '',
+        username: '',
         password: ''
       },
       loginError: false,
@@ -81,7 +81,7 @@ export default {
       authenticateUser(self.user)
         .then(data => {
           if (data) {
-            setAuthToken(data.login + data.password)
+            setAuthToken(data.username + data.password)
             self.setUserInfo(data)
             self.$router.push({ name: 'dashboard' })
             self.setGlobalLoading(false)

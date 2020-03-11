@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 from config import Configuration
 from model import db, alembic
+from service import jwt, bcrypt
 from api import *
 
 
@@ -17,6 +18,12 @@ database initialization
 """
 db.init_app(app)
 alembic.init_app(app)
+
+"""
+security initialization
+"""
+jwt.init_app(app)
+bcrypt.init_app(app)
 
 """
 api initialization
