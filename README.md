@@ -31,3 +31,6 @@ Modules:
         - memory / hippocampus (database / reading-writing from-to db)
         - server api security - flsak jwt
         - voice recognition (not implemented yet)
+
+
+just a test
