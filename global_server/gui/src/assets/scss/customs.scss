@@ -1,0 +1,14 @@
+/* custom css classes for project URSIDAE grafical interfaces */
+
+@use 'variables';
+
+/* autocomplete styles */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px variables.$backgroud-color inset;
+  box-shadow: 0 0 0 1000px variables.$backgroud-color inset;
+}
+
+/* style classes */
+.urs-text {
+  color: variables.$text-color !important;
+}

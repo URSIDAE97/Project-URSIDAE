@@ -1,0 +1,167 @@
+/* custom versions and additonal classes for uikit styles */
+
+@use 'variables';
+
+/* paddings */
+
+.uk-padding-xsmall {
+  padding: 10px;
+}
+
+.uk-padding-xxsmall {
+  padding: 5px;
+}
+
+.uk-padding-small-bottom {
+  padding-bottom: 15px;
+}
+
+.uk-padding-xsmall-bottom {
+  padding-bottom: 10px;
+}
+
+.uk-padding-xxsmall-bottom {
+  padding-bottom: 5px;
+}
+
+.uk-padding-small-top {
+  padding-top: 15px;
+}
+
+.uk-padding-xsmall-top {
+  padding-top: 10px;
+}
+
+.uk-padding-xxsmall-top {
+  padding-top: 5px;
+}
+
+.uk-padding-small-left {
+  padding-left: 15px;
+}
+
+.uk-padding-xsmall-left {
+  padding-left: 10px;
+}
+
+.uk-padding-xxsmall-left {
+  padding-left: 5px;
+}
+
+.uk-padding-small-right {
+  padding-right: 15px;
+}
+
+.uk-padding-xsmall-right {
+  padding-right: 10px;
+}
+
+.uk-padding-xxsmall-right {
+  padding-right: 5px;
+}
+
+/* margins */
+
+.uk-margin-xsmall-left {
+  margin-left: 5px;
+}
+
+.uk-margin-xmedium-left {
+  margin-left: 30px;
+}
+
+.uk-margin-xxmedium-left {
+  margin-left: 20px;
+}
+
+.uk-margin-xsmall-right {
+  margin-right: 5px;
+}
+
+.uk-margin-xmedium-right {
+  margin-right: 30px;
+}
+
+.uk-margin-xxmedium-right {
+  margin-right: 20px;
+}
+
+.uk-margin-xmedium-top {
+  margin-top: 30px;
+}
+
+.uk-margin-xxmedium-top {
+  margin-top: 20px;
+}
+
+.uk-margin-xsmall-bottom {
+  margin-bottom: 5px;
+}
+
+/* text sizes */
+
+.uk-text-xsmall {
+  font-size: 0.775rem;
+  line-height: 1.0;
+}
+
+.uk-text-xxsmall {
+  font-size: 0.675rem;
+  line-height: 1.0;
+}
+
+/* buttons */
+
+.uk-button-text::before {
+  border-bottom: 1px solid variables.$text-color;
+}
+
+/* notifications */
+
+.uk-notification-message {
+  border-radius: 15px;
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+.uk-notification-message > div {
+  margin-left: 5px;
+}
+
+.uk-notification-message > div > span > svg {
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+.uk-notification-close {
+  top: 11px;
+}
+
+.uk-notification-bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.uk-notification-message-danger {
+  background-color: variables.$error-background;
+  color: variables.$text-color;
+  border: 2px solid variables.$error-border;
+}
+
+.uk-notification-message-success {
+  background-color: variables.$success-background;
+  color: variables.$text-color;
+  border: 2px solid variables.$success-border;
+}
+
+.uk-notification-message-primary {
+  background-color: variables.$info-background;
+  color: variables.$text-color;
+  border: 2px solid variables.$info-border;
+}
+
+.uk-notification-message-warning {
+  background-color: variables.$warning-background;
+  color: variables.$text-color;
+  border: 2px solid variables.$warning-border;
+}

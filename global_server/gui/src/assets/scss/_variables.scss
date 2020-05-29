@@ -1,0 +1,19 @@
+/* Global variables for styling the grafical interface */
+
+/* colors */
+
+$backgroud-color: rgb(30, 30, 30);
+$text-color: rgb(240, 240, 240);
+$accent-color: rgb(175, 0, 0);
+
+$error-border: rgb(90, 0, 0);
+$error-background: rgba(200, 60, 60, 0.5);
+
+$success-border: rgb(0, 90, 0);
+$success-background: rgba(60, 200, 60, 0.5);
+
+$info-border: rgb(0, 0, 90);
+$info-background: rgba(60, 60, 200, 0.5);
+
+$warning-border: rgb(100, 60, 0);
+$warning-background: rgba(255, 255, 0, 0.5);

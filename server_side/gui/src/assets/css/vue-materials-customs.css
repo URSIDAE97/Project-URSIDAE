@@ -1,9 +1,0 @@
-/* custom versions and additonal classes for vue-materials styles */
-
-/* theme */
-
-:root{
-  --md-theme-default-primary: rgb(240, 240, 240) !important;
-  --md-theme-default-fieldvariant: rgb(175, 0, 0) !important;
-  --md-theme-default-primary-on-background: rgb(240, 240, 240) !important;
-}
